@@ -1,0 +1,120 @@
+﻿<Window x:Class="LazarBruno_Blathy_cafe.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LazarBruno_Blathy_cafe"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="620" Width="800">
+    <Grid Background="#FF969696">
+        <TextBlock Text="Bláthy Café - Kávéautómata" 
+               FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" 
+               VerticalAlignment="Top" Margin="0,10,0,0" FontFamily="Bradley Hand ITC"/>
+
+        <TextBlock Text="KÁVÉK" FontSize="18" FontWeight="Bold" 
+               Background="Brown" Foreground="White" Padding="10" 
+               HorizontalAlignment="Left" VerticalAlignment="Top" 
+               Margin="102,71,0,0" RenderTransformOrigin="1.124,0.562"/>
+
+        <Button Name="Latte" Content="☕ Latte (250 Ft)" Height="50" Width="180" 
+            FontSize="14" Click="KaveGomb_Click" 
+            HorizontalAlignment="Left" VerticalAlignment="Top" 
+            Margin="50,120,0,0" Background="White"/>
+
+        <Button Name="Espresso" Content="☕ Espresso (180 Ft)" Height="50" Width="180" 
+            FontSize="14" Click="KaveGomb_Click"
+            HorizontalAlignment="Left" VerticalAlignment="Top" 
+            Margin="50,180,0,0"/>
+
+        <Button Name="Macchiato" Content="☕ Cappuccino (220 Ft)" Height="50" Width="180" 
+            FontSize="14" Click="KaveGomb_Click"
+            HorizontalAlignment="Left" VerticalAlignment="Top" 
+            Margin="50,240,0,0"/>
+
+        <TextBlock Text="TEJEK" FontSize="18" FontWeight="Bold" 
+               Background="Gray" Foreground="White" Padding="10" 
+               HorizontalAlignment="Center" VerticalAlignment="Top" 
+               Margin="0,71,0,0"/>
+
+        <Button Name="Tej" Content="🥛 Tej" Height="50" Width="180" 
+            FontSize="14" Click="TejGomb_Click" IsEnabled="False"
+            HorizontalAlignment="Center" VerticalAlignment="Top" 
+            Margin="0,120,0,0"/>
+
+        <Button Name="MandulaTej" Content="🥛 Mandula Tej" Height="50" Width="180" 
+            FontSize="14" Click="TejGomb_Click" IsEnabled="False"
+            HorizontalAlignment="Center" VerticalAlignment="Top" 
+            Margin="0,180,0,0"/>
+
+        <Button Name="Laktozmentes" Content="🥛 Laktózmentes Tej" Height="50" Width="180" 
+            FontSize="14" Click="TejGomb_Click" IsEnabled="False"
+            HorizontalAlignment="Center" VerticalAlignment="Top" 
+            Margin="0,240,0,0"/>
+
+        <TextBlock Text="CUKROK" FontSize="18" FontWeight="Bold" 
+               Background="Gray" Foreground="White" Padding="10" 
+               HorizontalAlignment="Left" VerticalAlignment="Top" 
+               Margin="592,71,0,0" RenderTransformOrigin="0.81,0.335"/>
+
+        <TextBlock Text="Kockacukor:" FontSize="12"
+               HorizontalAlignment="Left" VerticalAlignment="Top" 
+               Margin="563,115,0,0"/>
+        <Slider Name="sliderKocka" Minimum="0" Maximum="3" Value="0" Width="150" 
+            TickFrequency="1" IsSnapToTickEnabled="True" IsEnabled="False" 
+            ValueChanged="Slider_ValueChanged"
+            HorizontalAlignment="Left" VerticalAlignment="Top" 
+            Margin="563,136,0,0"/>
+        <TextBlock Name="Kocka" Text="0 db" FontSize="12"
+               HorizontalAlignment="Left" VerticalAlignment="Top" 
+               Margin="626,167,0,0"/>
+
+        <TextBlock Text="Barnacukor:" FontSize="12"
+               HorizontalAlignment="Left" VerticalAlignment="Top" 
+               Margin="563,185,0,0"/>
+        <Slider Name="sliderBarna" Minimum="0" Maximum="3" Value="0" Width="150" 
+            TickFrequency="1" IsSnapToTickEnabled="True" IsEnabled="False" 
+            ValueChanged="Slider_ValueChanged"
+            HorizontalAlignment="Left" VerticalAlignment="Top" 
+            Margin="563,206,0,0"/>
+        <TextBlock Name="Barna" Text="0 db" FontSize="12"
+               HorizontalAlignment="Left" VerticalAlignment="Top" 
+               Margin="626,229,0,0"/>
+
+        <TextBlock Text="Édesítőszer:" FontSize="12"
+               HorizontalAlignment="Left" VerticalAlignment="Top" 
+               Margin="564,257,0,0"/>
+        <Slider Name="sliderEdes" Minimum="0" Maximum="3" Value="0" Width="150" 
+            TickFrequency="1" IsSnapToTickEnabled="True" IsEnabled="False" 
+            ValueChanged="Slider_ValueChanged"
+            HorizontalAlignment="Left" VerticalAlignment="Top" 
+            Margin="563,276,0,0"/>
+        <TextBlock Name="Edes" Text="0 db" FontSize="12"
+               HorizontalAlignment="Left" VerticalAlignment="Top" 
+               Margin="626,299,0,0"/>
+
+        <TextBlock Name="Statusz" Text="Válassz egy kávét!" FontSize="16" Foreground="White" 
+               FontWeight="Bold" Background="DarkGray" Padding="15"
+               HorizontalAlignment="Center" VerticalAlignment="Top" 
+               Margin="0,350,0,0"/>
+        <TextBlock Name="Ar" Text="Teljes ár: 0 Ft" FontSize="14" Foreground="Yellow" 
+               Background="DarkGray" Padding="10"
+               HorizontalAlignment="Center" VerticalAlignment="Top" 
+               Margin="0,406,0,0"/>
+
+        <Button Name="Fizetes" Content="💳 FIZETÉS" Height="60" Width="200" 
+            FontSize="18" FontWeight="Bold" Click="Fizetes_Click"
+            HorizontalAlignment="Left" VerticalAlignment="Top" 
+            Margin="538,463,0,0" Background="#FF579841"/>
+
+        <TextBlock Name="Uzenet" Text="" FontSize="14" FontWeight="Bold" 
+               Background="Black" Foreground="White" Padding="15" Visibility="Hidden"
+               HorizontalAlignment="Center" VerticalAlignment="Top" 
+               Margin="0,500,0,0"/>
+
+        <Button Name="UzenetOK" Content="OK" Height="50" Width="120" 
+            FontSize="16" FontWeight="Bold" Click="OK_Click" 
+            Visibility="Hidden" Background="Green" Foreground="White"
+            HorizontalAlignment="Center" VerticalAlignment="Top" 
+            Margin="0,540,0,0"/>
+    </Grid>
+</Window>

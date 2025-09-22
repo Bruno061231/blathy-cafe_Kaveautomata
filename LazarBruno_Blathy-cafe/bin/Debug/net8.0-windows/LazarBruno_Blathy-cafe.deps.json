@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "LazarBruno_Blathy-cafe/1.0.0": {
+        "runtime": {
+          "LazarBruno_Blathy-cafe.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LazarBruno_Blathy-cafe/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
